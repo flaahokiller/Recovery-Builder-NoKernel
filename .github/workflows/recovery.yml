@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
-  DEVICE: rosy
-  DT_LINK: https://github.com/ElytrA8/recovery_rosy
-  DT_PATH: device/xiaomi/rosy
+  DEVICE: PD1928BF_EX
+  DT_LINK: https://github.com/flaahokiller/vivo_1916-twrp
+  DT_PATH: device/vivo/PD1928BF_EX
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
