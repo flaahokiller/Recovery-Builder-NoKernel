@@ -14,8 +14,8 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/TeamWin/android_bootable_recovery
-  MANIFEST_BRANCH: android-9.0
+  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
+  MANIFEST_BRANCH: fox_9.0
   DEVICE: PD1928BF_EX
   DT_LINK: https://github.com/flaahokiller/twrp_PD1928BF_EX
   DT_PATH: device/vivo/PD1928BF_EX
