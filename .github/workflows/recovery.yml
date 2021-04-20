@@ -67,7 +67,3 @@ jobs:
          with:
           name: recoveryimage
           path: work/out/target/product/*/*.img
-
-       - uses: home rm -rf
-         with: rm -rf $HOME 
-               sudo reboot
