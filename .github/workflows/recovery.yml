@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
-  DEVICE: 1916
+  DEVICE: X605F
   DT_LINK: https://github.com/flaahokiller/vivo_1916-twrp
-  DT_PATH: device/vivo/1916
+  DT_PATH: device/lenovo/X605F
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
