@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox_9.0
-  DEVICE: X605F
-  DT_LINK: https://github.com/Yahoo-Mike/recovery_device_lenovo_X605F
-  DT_PATH: device/lenovo/X605F
+  MANIFEST_BRANCH: fox_10.0
+  DEVICE: X505F
+  DT_LINK: https://github.com/Yahoo-Mike/recovery_device_lenovo_X505F
+  DT_PATH: device/lenovo/X505F
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
