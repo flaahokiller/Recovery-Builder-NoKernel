@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox_10.0
-  DEVICE: X505F
-  DT_LINK: https://github.com/Yahoo-Mike/recovery_device_lenovo_X505F
-  DT_PATH: device/lenovo/X505F
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
+  MANIFEST_BRANCH: twrp-9.0
+  DEVICE: 1916
+  DT_LINK: https://github.com/flashokiller/twrp_PD1928BF_EX
+  DT_PATH: device/vivo/1916
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
