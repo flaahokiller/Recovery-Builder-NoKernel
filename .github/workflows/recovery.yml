@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
   MANIFEST_BRANCH: twrp-9.0
-  DEVICE: 1916
-  DT_LINK: https://github.com/flashokiller/twrp_PD1928BF_EX
-  DT_PATH: device/vivo/1916
+  DEVICE: pine
+  DT_LINK: https://github.com/13-beta2/android_device_xiaomi_pine
+  DT_PATH: device/xiaomi/pine
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
