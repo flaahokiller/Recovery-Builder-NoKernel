@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
   MANIFEST_BRANCH: twrp-9.0
-  DEVICE: pine
-  DT_LINK: https://github.com/13-beta2/android_device_xiaomi_pine
-  DT_PATH: device/xiaomi/pine
+  DEVICE: ysl
+  DT_LINK: https://github.com/flashokiller/android_device_xiaomi_ysl_twrp
+  DT_PATH: device/xiaomi/ysl
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
