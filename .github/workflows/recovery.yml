@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
   MANIFEST_BRANCH: twrp-9.0
-  DEVICE: ysl
-  DT_LINK: https://github.com/flashokiller/android_device_xiaomi_ysl_twrp
-  DT_PATH: device/xiaomi/ysl
+  DEVICE: mh2lm
+  DT_LINK: https://github.com/flashokiller/android_device_lge_mh2lm-twrp
+  DT_PATH: device/lge/mh2lm
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
