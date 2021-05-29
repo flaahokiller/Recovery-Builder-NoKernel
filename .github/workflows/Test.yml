@@ -28,7 +28,7 @@ jobs:
              mkdir work
              cd work
              sudo apt-get install git wget
-             wget $MANIFEST --depth=1 --single-branch 
+             wget $MANIFEST 
              
        - uses: actions/upload-artifact@v2
          with:
