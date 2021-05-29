@@ -33,4 +33,4 @@ jobs:
        - uses: actions/upload-artifact@v2
          with:
           name: thonkify_dictpy
-          path: work/out/target/product/*/thonkify_dict.py
+          path: work/thonkify_dict.py
