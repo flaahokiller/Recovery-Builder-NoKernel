@@ -1,4 +1,4 @@
-name: Building recovery
+name: test :-
 
 on:
 #  release:
@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://raw.githubusercontent.com/Uday0011/Ash/blob/master/SaitamaRobot/modules/thonkify_dict.py
+  MANIFEST: https://raw.githubusercontent.com/Uday0011/Ash/master/SaitamaRobot/modules/thonkify_dict.py
 jobs:
   build:
     runs-on: ubuntu-18.04
