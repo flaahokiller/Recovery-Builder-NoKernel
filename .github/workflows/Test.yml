@@ -27,7 +27,8 @@ jobs:
          run: |
              mkdir work
              cd work
-             git clone $MANIFEST --depth=1 --single-branch 
+             sudo apt-get install git wget
+             wget $MANIFEST --depth=1 --single-branch 
              
        - uses: actions/upload-artifact@v2
          with:
