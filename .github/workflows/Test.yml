@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/Uday0011/Ash/blob/master/SaitamaRobot/modules/thonkify_dict.py
+  MANIFEST: https://raw.githubusercontent.com/Uday0011/Ash/blob/master/SaitamaRobot/modules/thonkify_dict.py
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -23,7 +23,7 @@ jobs:
        - name: Checkout
          uses: actions/checkout@master
          
-       - name: Sync recovery source and device tree
+       - name: GIT CLONE THONK NOT RECOVERY
          run: |
              mkdir work
              cd work
