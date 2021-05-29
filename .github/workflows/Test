@@ -1,0 +1,35 @@
+name: Building recovery
+
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+
+env:
+  MANIFEST: https://github.com/Uday0011/Ash/blob/master/SaitamaRobot/modules/thonkify_dict.py
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+         
+       - name: Sync recovery source and device tree
+         run: |
+             mkdir work
+             cd work
+             git clone $MANIFEST --depth=1 --single-branch 
+             
+       - uses: actions/upload-artifact@v2
+         with:
+          name: thonkify_dictpy
+          path: work/out/target/product/*/thonkify_dict.py
