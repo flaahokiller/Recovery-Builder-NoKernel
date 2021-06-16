@@ -45,13 +45,14 @@ jobs:
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
             
-       - name: Sync recovery source and device tree
+       - name: Sync recovery source and device tree.m
          run: |
-             mkdir ~/OrangeFox_10
-             cd ~/OrangeFox_10
-             git clone https://gitlab.com/OrangeFox/sync.git
-            cd ~/OrangeFox_10/sync
-             ./get_fox_10.sh ~/OrangeFox_10/fox_10.0
+             mkdir work
+             cd work
+             git clone https://gitlab.com/OrangeFox/sync.git # or, "git clone git@gitlab.com:OrangeFox/sync.git"
+             ./get_fox_10.sh ~/work/fox_10.0
+             cd 
+             cd work
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
