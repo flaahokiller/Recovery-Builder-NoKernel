@@ -15,7 +15,7 @@ on:
 
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox-9.0
+  MANIFEST_BRANCH: fox_9.0
   DEVICE: 1916
   DT_LINK: https://github.com/flashokiller/twrp_PD1928BF_EX
   DT_PATH: device/vivo/1916
