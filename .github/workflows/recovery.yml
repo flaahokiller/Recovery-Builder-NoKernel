@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox-9.0
-  DEVICE: pine
-  DT_LINK: https://github.com/flashokiller/android_device_xiaomi_pine-pbrp
-  DT_PATH: device/xiaomi/pine
+  DEVICE: 1916
+  DT_LINK: https://github.com/flashokiller/twrp_PD1928BF_EX
+  DT_PATH: device/vivo/1916
   TARGET: recoveryzip
   TZ: Asia/Kolkata
 
