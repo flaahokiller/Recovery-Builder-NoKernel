@@ -19,7 +19,7 @@ env:
   DEVICE: 1916
   DT_LINK: https://github.com/flashokiller/twrp_PD1928BF_EX
   DT_PATH: device/vivo/1916
-  TARGET: recoveryzip
+  TARGET: recoveryimg
   TZ: Asia/Kolkata
 
 jobs:
@@ -48,11 +48,6 @@ jobs:
        - name: Sync recovery source and device tree.m
          run: |
              mkdir work
-             cd work
-             git clone https://gitlab.com/OrangeFox/sync.git # or, "git clone git@gitlab.com:OrangeFox/sync.git"
-             cd sync
-             ./get_fox_10.sh ~/work/fox_10.0
-             cd 
              cd work
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
