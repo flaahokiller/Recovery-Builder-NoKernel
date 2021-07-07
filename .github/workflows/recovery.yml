@@ -46,6 +46,9 @@ jobs:
             sudo chmod a+rx /usr/local/bin/repo
             apt install tmate && tmate
 
+        - name: Setup tmate session
+        uses: mxschmitt/action-tmate@master
+
        - name: Sync recovery source and device tree.m
          run: |
              mkdir work
