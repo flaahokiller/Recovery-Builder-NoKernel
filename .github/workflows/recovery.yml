@@ -14,10 +14,8 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox_9.0
   DEVICE: E6746
-  DT_LINK: https://github.com/HyperNotAryanX97/twrp_device_micromax_E6746
+  DT_LINK: https://github.com/flashokiller/twrp_micromax_e6746
   DT_PATH: device/micromax/E6746
   TARGET: recoveryimg
   TZ: Asia/Kolkata
@@ -49,18 +47,20 @@ jobs:
           uses: mxschmitt/action-tmate@master
 
        - name: Sync recovery source and device tree.m
-         run: |
-             mkdir work
-             cd work
-             repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
-             repo sync -j4
-             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+         run: |    
+         cd
+         mkdir ~/OrangeFox_10
+         cd ~/OrangeFox_10
+         git clone https://gitlab.com/OrangeFox/sync.git # or, "git clone git@gitlab.com:OrangeFox/sync.git"
+         cd ~/OrangeFox_10/sync
+          export USE_SSH=1
+         ./get_fox_10.sh ~/OrangeFox_10/fox_10.0
+          git clone $DT_LINK --depth=1 --single-branch $DT_PATH
              
        - name: Build
          run: |
-              cd work
-              apt install tmate && tmate
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng && export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              cd ~/OrangeFox_10/fox_10.0
+              . build/envsetup.sh &&lunch omni_$DEVICE-eng && export ALLOW_MISSING_DEPENDENCIES=true && export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1 && mka $TARGET
               
        - uses: actions/upload-artifact@v2
          with:
