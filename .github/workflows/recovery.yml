@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
   MANIFEST_BRANCH: twrp-11
-  DEVICE: m32
-  DT_LINK: https://github.com/flashokillerify/android_device_samsung_m32
-  DT_PATH: device/samsung/m32
+  DEVICE: E625F
+  DT_LINK: https://github.com/flashokillerify/twrp_d2s
+  DT_PATH: device/samsung/E625F
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
