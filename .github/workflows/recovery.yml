@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
-  MANIFEST_BRANCH: twrp-11
-  DEVICE: E625F
-  DT_LINK: https://github.com/flashokillerify/twrp_d2s
-  DT_PATH: device/samsung/E625F
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
+  MANIFEST_BRANCH: twrp-6.0
+  DEVICE: PD1628F_EX
+  DT_LINK: https://github.com/flashokillerify/Twrp_device_vivo_PD1628F_EX
+  DT_PATH: device/vivo/PD1628F_EX
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
