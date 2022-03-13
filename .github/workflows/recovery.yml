@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
-  MANIFEST_BRANCH: twrp-6.0
-  DEVICE: PD1628F_EX
-  DT_LINK: https://github.com/flashokillerify/Twrp_device_vivo_PD1628F_EX
-  DT_PATH: device/vivo/PD1628F_EX
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
+  MANIFEST_BRANCH: twrp-11.0
+  DEVICE: KF6k
+  DT_LINK: http://github.com/fahad15090/device-tecno-kf6k
+  DT_PATH: device/techno/KF6k
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -56,7 +56,7 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
        - uses: actions/upload-artifact@v2
          with:
